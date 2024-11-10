@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Lookbook</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color:rgb(181, 142, 91);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .filters button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #555;
+      color: white;
+      cursor: pointer;
+    }
+
+    .filters button:hover {
+      background-color: #777;
+    }
+
+    .lookbook {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .look {
+      position: relative;
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .look img {
+      width: 100%;
+      height: auto;
+    }
+
+    .look button {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      padding: 5px 10px;
+      border: none;
+      background-color:wheat;
+      color: rgb(20, 1, 1);
+      cursor: pointer;
+      border-radius: 5px;
+      opacity: 0.8;
+    }
+
+    .look button:hover {
+      opacity: 1;
+    }
+
+    .look:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      display: flex; 
+      justify-content: space-around; 
+      flex-wrap: wrap; 
+      max-width: 1200px; 
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FASHION LOOK BOOK</h1><br>
+    <p>Select a category to view outfits:</p><br>
+    <div class="filters">
+      <button onclick="filterLook('all')">All</button>
+      <button onclick="filterLook('casual')">Casual</button>
+      <button onclick="filterLook('formal')">Formal</button>
+      <button onclick="filterLook('Party')">Party</button>
+    </div>
+  </header>
+  
+  <main class="lookbook">
+    <div class="look casual">
+      <img src="F image1.jpg" alt="Casual Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+
+    <div class="look casual">
+      <img src="F image7.jpg" alt="Casual Look 2">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+
+    <div class="look casual">
+      <img src="F image3.jpg" alt="Casual Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+    
+    <div class="look casual">
+      <img src="F image 11.jpg" alt="Casual Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+    
+    <div class="look casual">
+      <img src="F image 17.jpg" alt="casual Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+    
+    <div class="look casual">
+      <img src="F image 18.jpg" alt="casual Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+    
+    <div class="look formal">
+      <img src="fF image.jpg" alt="Formal Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look formal">
+      <img src="F image 20.jpg" alt="Formal Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look formal">
+      <img src="F image6.jpg" alt="Formal Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look formal">
+      <img src="F image2.jpg" alt="Formal Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look Party">
+      <img src="F image 12.jpg" alt="Party Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look Party">
+      <img src="F image 10.jpg" alt="Party Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look Party">
+      <img src="F image 15.jpg" alt="Party Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look Party">
+      <img src="F image 16.jpg" alt="Party Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+  
+    <div class="look Party">
+      <img src="F image 21.jpg" alt="Party Look 1">
+      <button onclick="saveFavorite(this)">Save</button>
+    </div>
+</main>
+  
+<footer>
+  <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+      <!-- Contact Information -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+          <h4>Contact Us</h4>
+          <p>Fashion Look Book</p>
+          <p>1234 Style Street</p>
+          <p>New York, NY 10001</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: <a href="mailto:hasinig@fashionlookbook.com" style="color: #f3f3f3;">hasinig@fashionlookbook.com</a></p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+          <h4>Follow Us</h4>
+          <a href="https://www.facebook.com" target="_blank" style="color: #f3f3f3; margin-right: 10px;">Facebook</a>
+          <a href="https://www.instagram.com" target="_blank" style="color: #f3f3f3; margin-right: 10px;">Instagram</a>
+          <a href="https://www.twitter.com" target="_blank" style="color: #f3f3f3; margin-right: 10px;">Twitter</a>
+          <a href="https://www.pinterest.com" target="_blank" style="color: #f3f3f3;">Pinterest</a>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+          <h4>Subscribe to Our Newsletter</h4>
+          <form>
+              <input type="email" placeholder="Enter your email" style="padding: 8px; width: 80%; margin-bottom: 10px;">
+              <button type="submit" style="padding: 8px 16px; background-color: #555; color: white; border: none;">Subscribe</button>
+          </form>
+      </div>
+
+  </div>
+
+  <hr style="border: 0; border-top: 1px solid #555; margin: 20px 0;">
+
+  <!-- Copyright Information -->
+  <div style="text-align: center;">
+      <p>&copy; 2024 FASHION LOOK BOOK. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    // Filter looks by category
+    function filterLook(category) {
+      const looks = document.querySelectorAll('.look');
+      looks.forEach(look => {
+        if (category === 'all' || look.classList.contains(category)) {
+          look.style.display = 'block';
+        } else {
+          look.style.display = 'none';
+        }
+      });
+    }
+
+    // Save favorite looks
+    function saveFavorite(button) {
+      const favoriteContainer = document.getElementById('favorites');
+      const look = button.parentNode.cloneNode(true);
+      look.querySelector('button').remove();
+      favoriteContainer.appendChild(look);
+      alert("Added to Favorites!");
+    }
+  </script>
+</body>
+</html>
